@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../intro.rst:2
 msgid "Introduction"
-msgstr ""
+msgstr "简介"
 
 #: ../../intro.rst:7
 msgid ""
