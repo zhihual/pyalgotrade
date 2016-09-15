@@ -20,25 +20,25 @@ msgstr ""
 
 #: ../../sample_vwap_momentum.rst:2
 msgid "VWAP Momentum Trade"
-msgstr ""
+msgstr "VWAP 动量交易"
 
 #: ../../sample_vwap_momentum.rst:5
 msgid "This example is based on:"
-msgstr ""
+msgstr "本示例基于："
 
 #: ../../sample_vwap_momentum.rst:5
 msgid "https://www.quantopian.com/posts/momentum-trade"
-msgstr ""
+msgstr "https://www.quantopian.com/posts/momentum-trade"
 
 #: ../../sample_vwap_momentum.rst:9
 msgid "this is what the output should look like:"
-msgstr ""
+msgstr "示例输出如下："
 
 #: ../../sample_vwap_momentum.rst:13
 msgid "and this is what the plot should look like:"
-msgstr ""
+msgstr "结果绘图如下："
 
 #: ../../sample_vwap_momentum.rst:17
 msgid "You can get better returns by tunning the VWAP and threshold parameters."
-msgstr ""
+msgstr "你可以通过调节 VWAP 和阈值参数获得更好的执行结果。"
 
