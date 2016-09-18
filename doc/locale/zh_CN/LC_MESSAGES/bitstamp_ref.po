@@ -30,7 +30,7 @@ msgstr "WebSocket"
 msgid ""
 "This package has classes for the events emitted by Bitstamp's streaming "
 "service. Check https://www.bitstamp.net/websocket/ for more information."
-msgstr "本模块包含用于处理 Bitstamp 平台的 streaming 服务激发的事件的类，"
+msgstr "本模块包含用于处理 Bitstamp streaming 服务触发的事件的类，"
 "可访问 https://www.bitstamp.net/websocket/ 获取更多信息。"
 
 #: of pyalgotrade.bitstamp.wsclient.OrderBookUpdate:1
@@ -143,7 +143,7 @@ msgstr "基类：:class:`pyalgotrade.bitstamp.broker.BacktestingBroker`"
 
 #: of pyalgotrade.bitstamp.broker.PaperTradingBroker:1
 msgid "A Bitstamp paper trading broker."
-msgstr "Bitstamp 虚拟交易经纪商。"
+msgstr "Bitstamp 模拟交易经纪商。"
 
 #: of pyalgotrade.bitstamp.broker.PaperTradingBroker:3
 msgid "The initial amount of cash."

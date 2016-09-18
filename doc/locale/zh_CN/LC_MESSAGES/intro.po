@@ -31,21 +31,21 @@ msgstr "PyAlgoTrade 是一个基于事件驱动的 Python 算法交易库，"
 
 #: ../../intro.rst:5
 msgid "Backtesting with historical data from CSV files."
-msgstr "使用CSV文件格式的历史数据进行回测"
+msgstr "基于CSV文件里的历史数据进行回测"
 
 #: ../../intro.rst:6
 msgid "Paper trading using :ref:`Bitstamp <bitstamp-tutorial-label>` live feeds."
-msgstr "使用 :ref:`Bitstamp <bitstamp-tutorial-label>` 的实时数据进行模拟交易."
+msgstr "基于 :ref:`Bitstamp <bitstamp-tutorial-label>` 的实时数据进行模拟交易."
 
 #: ../../intro.rst:7
 msgid "Real trading on Bitstamp."
-msgstr "基于Bitstamp平台的真实交易"
+msgstr "基于Bitstamp平台进行真实交易"
 
 #: ../../intro.rst:9
 msgid ""
 "It should also make it easy to optimize a strategy using multiple "
 "computers."
-msgstr "它也很容易的使用多台计算机优化策略"
+msgstr "基于 PyAlgoTrade 你也可以很方便地使用多台计算机优化你的策略。"
 
 #: ../../intro.rst:17
 msgid "PyAlgoTrade is developed using Python 2.7 and depends on:"
@@ -79,7 +79,7 @@ msgstr "tweepy (https://github.com/tweepy/tweepy)——提供 Twitter 支持."
 
 #: ../../intro.rst:19
 msgid "so you need to have those installed in order to use this library."
-msgstr "因此要使用 PyAlgoTrade ，你需要安装以上依赖的 python 库"
+msgstr "因此要使用 PyAlgoTrade ，你需要安装以上依赖的 python 库。"
 
 #: ../../intro.rst:21
 msgid "You can install PyAlgoTrade using pip like this: ::"

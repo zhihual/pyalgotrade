@@ -34,7 +34,7 @@ msgstr "使用CSV文件格式的历史数据回测；"
 
 #: ../../intro.rst:6
 msgid "Paper trading using :ref:`Bitstamp <bitstamp-tutorial-label>` live feeds."
-msgstr "使用 :ref:`Bitstamp <bitstamp-tutorial-label>` 实时数据进行虚拟交易"
+msgstr "使用 :ref:`Bitstamp <bitstamp-tutorial-label>` 实时数据进行模拟交易"
 
 #: ../../intro.rst:7
 msgid "Real trading on Bitstamp."

@@ -36,12 +36,12 @@ msgstr "基于从雅虎金融下载的 CSV 文件构造 :class:`pyalgotrade.barf
 
 #: of pyalgotrade.tools.yahoofinance.build_feed:4
 msgid "Instrument identifiers."
-msgstr "Instrument identifiers."
+msgstr "股票代码。"
 
 #: of pyalgotrade.tools.quandl.build_feed:8
 #: pyalgotrade.tools.yahoofinance.build_feed:6
 msgid "The first year."
-msgstr "起始年。"
+msgstr "起始年份。"
 
 #: of pyalgotrade.tools.quandl.build_feed:10
 #: pyalgotrade.tools.yahoofinance.build_feed:8
@@ -65,7 +65,7 @@ msgstr "bar 的周期，支持 **pyalgotrade.bar.Frequency.DAY** 和 **pyalgotra
 msgid ""
 "The default timezone to use to localize bars. Check "
 ":mod:`pyalgotrade.marketsession`."
-msgstr "用于本地化 bar 的默认失去，参考 :mod:`pyalgotrade.marketsession` 。"
+msgstr "用于本地化 bar 的默认时区，参考 :mod:`pyalgotrade.marketsession` 。"
 
 #: of pyalgotrade.tools.quandl.build_feed:18
 #: pyalgotrade.tools.yahoofinance.build_feed:16
@@ -83,7 +83,7 @@ msgstr "从雅虎金融下载指定年份的日线数据(daily bar)。"
 #: of pyalgotrade.tools.yahoofinance.download_daily_bars:3
 #: pyalgotrade.tools.yahoofinance.download_weekly_bars:3
 msgid "Instrument identifier."
-msgstr "Instrument identifier."
+msgstr "股票代码。"
 
 #: of pyalgotrade.tools.quandl.download_daily_bars:7
 #: pyalgotrade.tools.quandl.download_weekly_bars:7
@@ -114,7 +114,7 @@ msgid ""
 "files downloaded from Quandl. CSV files are downloaded if they haven't "
 "been downloaded before."
 msgstr "基于 Quandl 下载的 CSV 文件构建 :class:`pyalgotrade.barfeed.quandlfeed.Feed` 的实例。"
-"CSV 文件已经下载过则不再下载。"
+"如果 CSV 文件已经下载过则不再下载。"
 
 #: of pyalgotrade.tools.quandl.build_feed:4
 msgid "The dataset source code."
@@ -126,7 +126,7 @@ msgstr "The dataset table codes."
 
 #: of pyalgotrade.tools.quandl.build_feed:20
 msgid "True if the instruments don't have adjusted close values."
-msgstr "True if the instruments don't have adjusted close values."
+msgstr "如果没有复权收盘价则为 True。"
 
 #: of pyalgotrade.tools.quandl.build_feed:22
 #: pyalgotrade.tools.quandl.download_daily_bars:11
@@ -140,8 +140,8 @@ msgstr "可选，每天调用50次以上时需要的授权密钥。"
 msgid ""
 "Optional. A dictionary to map column names. Valid key values are:  * "
 "datetime * open * high * low * close * volume * adj_close"
-msgstr "可选，映射列名的字典，合法的字典key包括："
-" * datetime * open * high * low * close * volume * adj_close"
+msgstr "可选，映射列名的字典，合法的字典key包括：* "
+"datetime * open * high * low * close * volume * adj_close"
 
 #: of pyalgotrade.tools.quandl.build_feed:24
 msgid "Optional. A dictionary to map column names. Valid key values are:"
@@ -208,26 +208,24 @@ msgid ""
 ":class:`pyalgotrade.barfeed.csvfeed.GenericBarFeed`. The CSV file will "
 "have the following format: ::"
 msgstr ""
-"Resample a BarFeed into a CSV file grouping bars by a certain frequency. "
-"The resulting file can be loaded using "
-":class:`pyalgotrade.barfeed.csvfeed.GenericBarFeed`. The CSV file will "
-"have the following format: ::"
+"将一个 Bar 数据源以指定的时间间隔归类重采样到一个 CSV 文件。"
+"结果 CSV 文件可以使用 :class:`pyalgotrade.barfeed.csvfeed.GenericBarFeed` 加载。"
+"结果 CSV 文件的格式如下：::"
 
 #: of pyalgotrade.tools.resample.resample_to_csv:10
 msgid ""
 "The bar feed that will provide the bars. It should only hold bars from a "
 "single instrument."
 msgstr ""
-"The bar feed that will provide the bars. It should only hold bars from a "
-"single instrument."
+"提供原始 bar 的数据源。必须只包含单只股票的 bar 数据。"
 
 #: of pyalgotrade.tools.resample.resample_to_csv:12
 msgid "The grouping frequency in seconds. Must be > 0."
-msgstr "The grouping frequency in seconds. Must be > 0."
+msgstr "新的采样间隔，必须大于0。"
 
 #: of pyalgotrade.tools.resample.resample_to_csv:17
 msgid "Datetimes are stored without timezone information."
-msgstr "未保存时区信息的 Datetime 。"
+msgstr "结果文件的 Datetime 列为未保存时区信息的 Datetime 。"
 
 #: of pyalgotrade.tools.resample.resample_to_csv:18
 msgid ""
@@ -241,7 +239,7 @@ msgstr "支持的重采样周期如下："
 
 #: of pyalgotrade.tools.resample.resample_to_csv:20
 msgid "Less than bar.Frequency.DAY"
-msgstr "Less than bar.Frequency.DAY"
+msgstr "小于 bar.Frequency.DAY 的值"
 
 #: of pyalgotrade.tools.resample.resample_to_csv:21
 msgid "bar.Frequency.DAY"

@@ -35,8 +35,8 @@ msgid ""
 "Class responsible for connecting to Twitter's public stream API and "
 "dispatching events. Check https://dev.twitter.com/docs/streaming-"
 "apis/streams/public for more information."
-msgstr "此类负责连接推特的开发流 API 并分发事件。访问 "
-"https://dev.twitter.com/docs/streaming-apis/streams/public for more information "
+msgstr "此类负责连接推特的开放流 API （public stream API）并分发事件。访问 "
+"https://dev.twitter.com/docs/streaming-apis/streams/public "
 "获取更多信息。"
 
 #: of pyalgotrade.twitter.feed.TwitterFeed:4

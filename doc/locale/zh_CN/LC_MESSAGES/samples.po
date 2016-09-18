@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../samples.rst:4
 msgid "Sample strategies"
-msgstr "策略样例"
+msgstr "策略举例"
 
 #: ../../samples.rst:7
 msgid "Momentum"

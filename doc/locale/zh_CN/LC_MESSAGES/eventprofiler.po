@@ -31,15 +31,16 @@ msgid ""
 "data for a specified event and then calculates the impact of that event "
 "on the equity prices in the past and the future over a certain lookback "
 "period."
-msgstr "受 QSTK（http://wiki.quantsoftware.org/index.php?title=QSTK_Tutorial_9）启发，"
+msgstr "**eventprofiler** 模块的灵感来自于 "
+"QSTK（http://wiki.quantsoftware.org/index.php?title=QSTK_Tutorial_9），"
 "**eventprofiler** 模块用于分析、统计事件是如何影响未来股票价格的。事件分析器器通过"
-"扫描某特定事件的历史行情数据来计算该事件对未来及过去一段时间该股票价格的影响。"
+"扫描某特定时间的历史行情数据来计算该事件对未来及过去一段时间该股票价格的影响。"
 
 #: ../../eventprofiler.rst:9
 msgid ""
 "**The goal of this tool is to help you quickly validate an idea, before "
 "moving forward with the backtesting process.**"
-msgstr "**本工具的目的是帮助你在继续回测进程前快速的验证想法。**"
+msgstr "**本工具的目的是使你在继续回测进程前快速的验证你的想法。**"
 
 #: of pyalgotrade.eventprofiler.Predicate:1
 #: pyalgotrade.eventprofiler.Profiler:1 pyalgotrade.eventprofiler.Results:1
@@ -54,7 +55,7 @@ msgstr "分析器返回的结果。"
 msgid ""
 "Returns the number of events occurred. Events that are on the boundary "
 "are skipped."
-msgstr "返回发生事件的数目，边界事件被忽略。"
+msgstr "返回发生事件的数目，在边界事件被忽略（应该是时间范围的边界）。"
 
 #: of pyalgotrade.eventprofiler.Predicate:1
 msgid ""
@@ -71,11 +72,11 @@ msgstr "**强制重写** 上一个 bar （bards[-1]，译注：疑似原文有�
 
 #: of pyalgotrade.eventprofiler.Predicate.eventOccurred:3
 msgid "Instrument identifier."
-msgstr "Instrument 标识符。"
+msgstr "股票代码。"
 
 #: of pyalgotrade.eventprofiler.Predicate.eventOccurred:5
 msgid "The BarDataSeries for the given instrument."
-msgstr "The BarDataSeries for the given instrument."
+msgstr "该股票的 bar 数据序列。"
 
 #: of pyalgotrade.eventprofiler.Profiler:1
 msgid ""
@@ -113,7 +114,7 @@ msgstr "用于运行事件分析器的 bar 数据源。"
 
 #: of pyalgotrade.eventprofiler.Profiler.run:5
 msgid "True if adjusted close values should be used to calculate returns."
-msgstr "如果复权收盘价用于计算收益，则为 True。"
+msgstr "如果使用复权收盘价计算收益，则为 True。"
 
 #: of pyalgotrade.eventprofiler.plot:1
 msgid "Plots the result of the analysis."
@@ -143,13 +144,13 @@ msgid ""
 "close returns of the last 90 days. These are the stocks that \"gapped "
 "down\"."
 msgstr "想法是在开盘前选择昨天收盘价比今天开盘价低于某个标准，该标准通过最近90天的"
-"日军收盘价进行计算。这些股票称为 \"gapped down\" 。"
+"日均收盘价进行计算。这些股票称为 \"gapped down\" 。"
 
 #: ../../eventprofiler.rst:25
 msgid ""
 "This is narrowed down by requiring the open price to be higher than the "
 "20-day moving average of the closing price."
-msgstr "本例实现的“缩小版“ \"gapped down\" ，即选择开盘价高于最近20天的收盘价移动平均线的股票。"
+msgstr "本例的实现为“缩小版“ \"gapped down\" ，即选择开盘价高于最近20天的收盘价移动平均线的股票。"
 
 #: ../../eventprofiler.rst:30
 msgid "The code is doing 4 things:"
@@ -159,7 +160,7 @@ msgstr "代码做了四件事："
 msgid ""
 "Declaring a :class:`Predicate` that implements the 'Buy-on-Gap Model' "
 "event identification."
-msgstr "声明了 :class:`Predicate` 的对象实现 选择跳空股票模型（Buy-on-Gap Model）的事件标识。"
+msgstr "声明了 :class:`Predicate` 的对象实现选择跳空股票模型（Buy-on-Gap Model）的事件标识。"
 
 #: ../../eventprofiler.rst:33
 msgid "Loading bars for some stocks."

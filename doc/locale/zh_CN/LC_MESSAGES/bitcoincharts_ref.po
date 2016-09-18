@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../bitcoincharts_ref.rst:2
 msgid "bitcoincharts -- Bitcoin Charts reference"
-msgstr "bitcoincharts —— 比特币图表参考手册"
+msgstr "bitcoincharts —— Bitcoin Charts 参考手册"
 
 #: ../../bitcoincharts_ref.rst:5
 msgid "Feeds"
@@ -35,7 +35,7 @@ msgid ""
 "A BarFeed that builds bars from a Historic Trade Data CSV file as "
 "described in http://www.bitcoincharts.com/about/markets-api/. Files can "
 "be downloaded from http://api.bitcoincharts.com/v1/csv/."
-msgstr "基于 http://www.bitcoincharts.com/about/markets-api/ 所描述的 CSV 文件历史交易数据"
+msgstr "基于 http://www.bitcoincharts.com/about/markets-api/ 所描述的 CSV 历史交易数据格式"
 "构建的 bar 数据源。CSV 文件可从 http://api.bitcoincharts.com/v1/csv/ 下载。"
 
 #: of pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed:4
@@ -52,15 +52,15 @@ msgid ""
 "items are added, a corresponding number of items are discarded from the "
 "opposite end. If None then dataseries.DEFAULT_MAX_LEN is used."
 msgstr ":class:`pyalgotrade.dataseries.bards.BarDataSeries` 存储的值的最大数量。如果不是 None，"
-"则必须是大于0的整数。一旦达到最大值，新的数据添加时会丢弃掉同等数量的老数据。若为 None， "
+"则必须是大于0的整数。一旦达到最大值，新的数据添加时会丢弃掉同等数量的最老数据。若为 None， "
 "则使用 dataseries.DEFAULT_MAX_LEN 。"
 
 #: of pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed:13
 msgid ""
 "A :class:`pyalgotrade.bar.Bar` instance will be created for every trade, "
 "so open, high, low and close values will all be the same."
-msgstr ":class:`pyalgotrade.bar.Bar` 的实例会在每次交易时创建，"
-"因此开盘价，最高价，最低价和收盘价都是一样的。"
+msgstr "会创建一个 :class:`pyalgotrade.bar.Bar` 的实例用于每次交易，"
+"因此他们的开盘价，最高价，最低价和收盘价都是一样的。"
 
 #: of pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed:14
 msgid "Files must be sorted with the **unixtime** column in ascending order."
@@ -68,7 +68,7 @@ msgstr "文件必须以 **unixtime** 列升序排列。"
 
 #: of pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed.addBarsFromCSV:1
 msgid "Loads bars from a trades CSV formatted file."
-msgstr "从 CSV 格式的交易信息文件中加载数据。"
+msgstr "从 CSV 交易数据文件中加载数据。"
 
 #: of pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed.addBarsFromCSV:3
 msgid "The path to the file."
@@ -102,7 +102,7 @@ msgstr "可选的 datetime 用于过滤要加载的 bar 数据，"
 
 #: of pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed.addBarsFromCSV:17
 msgid "Every file that you load bars from must have trades in the same currency."
-msgstr "所有加载 bar 数据的文件的交易信息都必须使用相同的货币。"
+msgstr "所有加载 bar 数据的文件都必须使用相同的货币进行交易。"
 
 #: of pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed.addBarsFromCSV:18
 msgid "If fromDateTime or toDateTime are naive, they are treated as UTC."

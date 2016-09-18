@@ -27,8 +27,8 @@ msgid ""
 "This goal of this simple SMA crossover example is to show how to put all "
 "the pieces together to paper trade a strategy using realtime feeds "
 "supplied by Bitstamp (https://www.bitstamp.net/)."
-msgstr "本简单SMA交叉的例子是为了展示如何使用 Bitstamp（https://www.bitstamp.net/）"
-"平台提供的实时数据源编写虚拟交易策略。"
+msgstr "这是一个简单SMA交叉的例子，目的是为了展示如何使用 Bitstamp（https://www.bitstamp.net/）"
+"平台提供的实时数据源编写模拟交易策略。"
 
 #: ../../bitstamp_example.rst:9
 msgid ""

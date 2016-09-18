@@ -29,7 +29,7 @@ msgid ""
 " this is a realtime feed, it only makes sense in paper trading or real "
 "trading scenarios, but not in backtesting."
 msgstr "twitter 包支持在策略中接收推特事件并用于交易决策。"
-"由于是实时的数据源，只在虚拟交易和实时交易中有意义，在回测中使用没有任何意义。"
+"由于是实时的数据源，只在模拟交易和实时交易中有意义，在回测中使用没有任何意义。"
 
 #: ../../twitter.rst:8
 msgid ""

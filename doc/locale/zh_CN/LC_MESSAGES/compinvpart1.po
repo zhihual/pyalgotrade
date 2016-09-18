@@ -40,7 +40,7 @@ msgstr "家庭作业1"
 msgid ""
 "For this assignment I had to pick 4 stocks, invest a total of $100000 "
 "during 2011, and calculate:"
-msgstr "这个作业我需要在二〇一一年购买四只股票，总共投资 $1000000 ，并计算出："
+msgstr "在这个作业中我需要在二〇一一年购买四只股票，总共投资 $1000000 ，并计算出："
 
 #: ../../compinvpart1.rst:12
 msgid "Final portfolio value"
@@ -70,7 +70,7 @@ msgstr "使用如下命令下载行情数据：::"
 msgid ""
 "Although the deliverable was an Excel spreadsheet, I validated the "
 "results using this piece of code:"
-msgstr "下载数据的格式是 Excel，我采用如下代码验证结果："
+msgstr "下载数据的格式是 Excel 工作表，我使用如下代码验证结果："
 
 #: ../../compinvpart1.rst:29
 msgid "The results were:"

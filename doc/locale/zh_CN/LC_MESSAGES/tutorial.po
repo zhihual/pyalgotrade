@@ -32,8 +32,8 @@ msgid ""
 "with minimal effort."
 msgstr "本简明教程是对 PyAlgoTrade 的一个快速介绍。"
 "如之前简介所述，PyAlgoTrade的目标是帮助你回测股票交易策略。"
-"我们假定你已经有了一个用于交易策略的想法，并且你想根据历史行情数据看看这个想法的表现，"
-"那么 PyAlgoTrade 可以让你付出很少的精力验证自己的想法。"
+"我们假定你已经有了一个用于交易策略的想法，并且你想根据历史行情数据检验这个想法的表现，"
+"那么 PyAlgoTrade 可以让你付出很少的精力来验证自己的想法。"
 
 #: ../../tutorial.rst:11
 msgid ""
@@ -79,7 +79,7 @@ msgstr "优化器（Optimizer）"
 msgid ""
 "These are the classes that you define that implement the trading logic. "
 "When to buy, when to sell, etc."
-msgstr "你需要定义这些策略类来实现你的交易逻辑，何时买，何时卖等待。"
+msgstr "你需要定义策略类来实现你的交易逻辑，何时买，何时卖等待。"
 
 #: ../../tutorial.rst:28
 msgid ""
@@ -88,24 +88,24 @@ msgid ""
 "feed data to a strategy. Feeds are not limited to bars. For example, "
 "there is a Twitter feed that allows incorporating Twitter events into "
 "trading decisions."
-msgstr "用于数据抽象。例如你可以从一个 CSV文件（逗号分割文件） 数据源推送 bars 数据回馈给策略。"
+msgstr "用于数据抽象。例如你可以从一个 CSV 文件（逗号分割符文件） 数据源推送 bars 数据给策略。"
 "数据源并不限制于 bars 。例如 Tweeter feed 允许分析 Twitter 事件用于策略决策。"
 
 #: ../../tutorial.rst:34
 msgid "Brokers are responsible for executing orders."
-msgstr "券商模块用于执行交易订单。"
+msgstr "券商模块用于执行订单交易。"
 
 #: ../../tutorial.rst:37
 msgid "A data series is an abstraction used to manage time series data."
-msgstr "数据序列用于管理基于时间序列数据。"
+msgstr "数据序列是用于管理基于时间的序列数据的抽象。"
 
 #: ../../tutorial.rst:40
 msgid ""
 "These are a set of filters that you use to make calculations on top of "
 "DataSeries. For example SMA (Simple Moving Average), RSI (Relative "
 "Strength Index), etc. These filters are modeled as DataSeries decorators."
-msgstr "包含很多用于基于数据序列的计算的过滤器，"
-"例如 SMA（简单移动平军训），RSI（相对强弱指标）等待。"
+msgstr "包含很多用于对数据序列进行计算的过滤器，"
+"例如 SMA（简单移动平军训），RSI（相对强弱指标）等等。"
 "这些过滤器以数据序列装饰器的方式实现。"
 
 #: ../../tutorial.rst:44
@@ -135,7 +135,7 @@ msgstr "pyalgotrade.tools.yahoofinance 包从雅虎金融（Yahoo! Finance）"
 msgid ""
 "Let's start with a simple strategy, that is, one that just prints closing"
 " prices as they are processed:"
-msgstr "接下来我们从一个简单的策略开始，在处理过程中打印收盘价："
+msgstr "接下来我们从一个简单的策略开始，在策略运行过程中打印收盘价："
 
 #: ../../tutorial.rst:71
 msgid "The code is doing 3 main things:"
@@ -149,11 +149,11 @@ msgstr "声明一个新的策略。只有 *onBars* 方法是必须要定义的�
 
 #: ../../tutorial.rst:70 ../../tutorial.rst:267
 msgid "Loading the feed from a CSV file."
-msgstr "从 CSV 文件加载数据源"
+msgstr "从 CSV 文件加载数据。"
 
 #: ../../tutorial.rst:71
 msgid "Running the strategy with the bars supplied by the feed."
-msgstr "基于 feed 提供的 bar 数据允许策略。"
+msgstr "基于 feed 提供的 bar 数据运行策略。"
 
 #: ../../tutorial.rst:73
 msgid "If you run the script you should see the closing prices in order:"
@@ -346,12 +346,12 @@ msgid ""
 "8.5 days to evaluate all of them and find the best set of parameters. "
 "That is a long time, but if I can get ten 8-core computers to do the job "
 "then the total time will go down to about 2.5 hours."
-msgstr "基于一组参数测试这个策略话费 0.16 秒。如果我们串行地执行所有这些参数组合，"
-"需要话费8.5天来找到最好的参数组合。但是如果我们使用一台八核的计算机来执行，总花费时间则仅需2.5小时。"
+msgstr "基于一组参数运行这个策略需要 0.16 秒。如果我们串行地执行所有这些参数组合，"
+"需要花费8.5天来找到最好的参数组合。但是如果我们使用一台八核的计算机来执行，总花费时间则仅需2.5小时。"
 
 #: ../../tutorial.rst:162
 msgid "Long story short, **we need to go parallel**."
-msgstr "简单来说，**我们需要并行计算**"
+msgstr "简单来说，**我们需要并行计算** 。"
 
 #: ../../tutorial.rst:164
 msgid ""

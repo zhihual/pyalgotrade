@@ -41,7 +41,7 @@ msgid ""
 "**pyalgotrade.talibext.indicator** module should be straightforward. When"
 " using **talib** standalone you do something like this: ::"
 msgstr "如果你对 **talib** 模块熟悉，那么使用 **pyalgotrade.talibext.indicator** 模块也很简单。"
-"你可能会像下面这样单独使用 **talib** ::"
+"单独使用 **talib** 时你需要像下面这样::"
 
 #: ../../talib.rst:17
 msgid ""
@@ -79,5 +79,5 @@ msgstr "如果参数名是 **barDs** ，那么你需要传递 "
 msgid ""
 "The following TA-Lib functions are available through the "
 "**pyalgotrade.talibext.indicator** module:"
-msgstr "下面的 TA-Lib 函数需要通过 **pyalgotrade.talibext.indicator** 模块访问："
+msgstr "下面的 TA-Lib 函数可以通过 **pyalgotrade.talibext.indicator** 模块访问："
 

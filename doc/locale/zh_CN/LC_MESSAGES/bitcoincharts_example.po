@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../bitcoincharts_example.rst:2
 msgid "Bitcoin Charts example"
-msgstr "比特币图表举例"
+msgstr "Bitcoin Charts 使用举例"
 
 #: ../../bitcoincharts_example.rst:4
 msgid ""
@@ -31,7 +31,7 @@ msgid ""
 "backtesting faster."
 msgstr "尽管你完全可以通过 :class:`pyalgotrade.bitcoincharts.barfeed.CSVTradeFeed` 使用 "
 "http://www.bitcoincharts.com/about/markets-api/ 提供的"
-"分笔数据（tick data）来回测策略，但是你肯定希望使用更长周期的数据加快回测速度。"
+"分笔数据（tick data）来回测策略，但是你也希望使用更长周期的数据加快回测速度。"
 
 #: ../../bitcoincharts_example.rst:8
 msgid ""
@@ -39,7 +39,7 @@ msgid ""
 " has 4588830 events so we'll transform a portion of it into 30 minute "
 "bars for backtesting purposes with the following script:"
 msgstr "截至到二〇一四年八月十二日，http://api.bitcoincharts.com/v1/csv/bitstampUSD.csv.gz 有"
-"个事件，所以我们需要将其转换称三是分钟线用以回测，代码如下："
+"4588830 个事件，所以我们需要将其转换称三十分钟间隔的数据用以回测，代码如下："
 
 #: ../../bitcoincharts_example.rst:13
 msgid ""

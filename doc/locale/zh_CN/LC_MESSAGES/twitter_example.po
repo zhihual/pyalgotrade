@@ -29,13 +29,13 @@ msgid ""
 "Bitstamp's live feed since backtesting with Twitter is not supported so "
 "please take a look at the :ref:`bitstamp-tutorial-label` section before "
 "moving forward."
-msgstr "如下简单例子的目的是演示所有的模块如何一起协作实现在策略中应用推特时间。"
+msgstr "如下简单例子的目的是演示所有的模块如何一起协作实现在策略中应用推特事件。"
 "由于推特模块不支持回测，我们使用 Bitstamp 平台的实时数据来做演示，在继续之前"
-"请确保你已经阅读过 ref:`bitstamp-tutorial-label` 章节。"
+"请确保你已经阅读过 :ref:`bitstamp-tutorial-label` 章节。"
 
 #: ../../twitter_example.rst:13
 msgid "In order to connect to Twitter's API you'll need:"
-msgstr "你需要这样做来连接到推特的 API："
+msgstr "你需要这些信息来连接到推特的 API："
 
 #: ../../twitter_example.rst:10
 msgid "Consumer key"

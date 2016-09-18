@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../bitcoincharts.rst:2
 msgid "Bitcoin Charts support"
-msgstr "比特币图表支持"
+msgstr "Bitcoin Charts 支持"
 
 #: ../../bitcoincharts.rst:4
 msgid ""
@@ -34,7 +34,7 @@ msgid ""
 "Historical trade data in CSV format is described in "
 "http://www.bitcoincharts.com/about/markets-api/, and files can be "
 "downloaded from http://api.bitcoincharts.com/v1/csv/."
-msgstr "CSV 格式的历史交易数据参考 http://www.bitcoincharts.com/about/markets-api/ ，"
+msgstr "CSV 历史交易数据格式参考 http://www.bitcoincharts.com/about/markets-api/ ，"
 "可从 http://api.bitcoincharts.com/v1/csv/ 下载交易数据文件。"
 
 #: ../../bitcoincharts.rst:10
