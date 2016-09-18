@@ -1,0 +1,9 @@
+matplotlib==1.5.3
+numpy==1.11.1
+numpydoc==0.6.0
+scipy==0.18.0
+Sphinx==1.4.6
+sphinx-intl==0.9.9
+tornado==4.4.1
+tweepy==3.5.0
+ws4py==0.3.5
