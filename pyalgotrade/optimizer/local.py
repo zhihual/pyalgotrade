@@ -24,6 +24,7 @@ import os
 import random
 import socket
 import threading
+import time
 
 from pyalgotrade.optimizer import base
 from pyalgotrade.optimizer import server
@@ -71,11 +72,68 @@ def find_port():
             pass
 
 
-def wait_process(p):
-    timeout = 10
-    p.join(timeout)
+def stop_process(p):
+    timeout = 3
+    p.join(timeout)  # This is necessary to avoid zombie processes.
     while p.is_alive():
+        logger.info("Stopping process %s" % p.pid)
+        p.terminate()
         p.join(timeout)
+
+
+def run_impl(strategyClass, barFeed, strategyParameters, workerCount=None, logLevel=logging.ERROR, resultSinc=None):
+    assert(workerCount is None or workerCount > 0)
+    if workerCount is None:
+        workerCount = multiprocessing.cpu_count()
+
+    ret = None
+    workers = []
+    port = find_port()
+    if port is None:
+        raise Exception("Failed to find a port to listen")
+
+    # Build and start the server thread before the worker processes.
+    # We'll manually stop the server once workers have finished.
+    paramSource = base.ParameterSource(strategyParameters)
+    if resultSinc is None:
+        resultSinc = base.ResultSinc()
+
+    # Create and start the server.
+    logger.info("Starting server")
+    srv = xmlrpcserver.Server(paramSource, resultSinc, barFeed, "localhost", port, False)
+    serverThread = ServerThread(srv)
+    serverThread.start()
+
+    try:
+        logger.info("Starting workers")
+        # Build the worker processes.
+        for i in range(workerCount):
+            workers.append(multiprocessing.Process(
+                target=worker_process,
+                args=(strategyClass, port, logLevel))
+            )
+        # Start workers
+        for process in workers:
+            process.start()
+
+        # Wait for all jobs to complete.
+        while srv.jobsPending():
+            time.sleep(1)
+    finally:
+        # Stop workers
+        for process in workers:
+            stop_process(process)
+
+        # Stop and wait the server to finish.
+        logger.info("Stopping server")
+        srv.stop()
+        serverThread.join()
+
+        bestResult, bestParameters = resultSinc.getBest()
+        if bestResult is not None:
+            ret = server.Results(bestParameters.args, bestResult)
+
+    return ret
 
 
 def run(strategyClass, barFeed, strategyParameters, workerCount=None, logLevel=logging.ERROR):
@@ -92,50 +150,4 @@ def run(strategyClass, barFeed, strategyParameters, workerCount=None, logLevel=l
     :rtype: A :class:`Results` instance with the best results found.
     """
 
-    assert(workerCount is None or workerCount > 0)
-    if workerCount is None:
-        workerCount = multiprocessing.cpu_count()
-
-    ret = None
-    workers = []
-    port = find_port()
-    if port is None:
-        raise Exception("Failed to find a port to listen")
-
-    # Build and start the server thread before the worker processes.
-    # We'll manually stop the server once workers have finished.
-    paramSource = base.ParameterSource(strategyParameters)
-    resultSinc = base.ResultSinc()
-    srv = xmlrpcserver.Server(paramSource, resultSinc, barFeed, "localhost", port, False)
-    serverThread = ServerThread(srv)
-    serverThread.start()
-
-    try:
-        # Build the worker processes.
-        for i in range(workerCount):
-            workers.append(multiprocessing.Process(
-                target=worker_process,
-                args=(strategyClass, port, logLevel))
-            )
-
-        logger.info("Executing workers")
-
-        # Start workers
-        for process in workers:
-            process.start()
-
-        # Wait workers
-        for process in workers:
-            wait_process(process)
-
-        logger.info("All workers finished")
-    finally:
-        # Stop and wait the server to finish.
-        srv.stop()
-        serverThread.join()
-
-        bestResult, bestParameters = resultSinc.getBest()
-        if bestResult is not None:
-            ret = server.Results(bestParameters.args, bestResult)
-
-    return ret
+    return run_impl(strategyClass, barFeed, strategyParameters, workerCount=workerCount, logLevel=logLevel)
